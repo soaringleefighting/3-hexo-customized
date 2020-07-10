@@ -249,8 +249,8 @@ gentie:
 gitalk:
   githubID: soaringleefighting
   repo: soaringleefighting.github.io
-  ClientID: 
-  ClientSecret: 
+  ClientID: a9777cdb7073ca9a0508
+  ClientSecret: e69e5ad937ab2c5e3b82fa7f1a5dfdb14441e9c0
   adminUser: soaringleefighting
   distractionFreeMode: true
   language: zh-CN
