@@ -31,7 +31,7 @@ link:
 
 ##########多作者模式############
 author:
-  on: true
+  on: false
   authors:
     author1: SoaringLee
     author2: 小马哥
@@ -41,6 +41,11 @@ author:
 category:
   num: true # 分类显示文章数
   sub: true # 开启多级分类
+  sort:
+    - 读书
+    - 工具
+    - 技术
+    - 生活
   width:
     lg: 150 # 1468px<屏幕宽度 左侧分类宽度
     md: 120 # 1024px<屏幕宽度<=1468px 左侧分类宽度
@@ -50,6 +55,9 @@ category:
 # categories:
 #   - 工具
 #   - hexo
+
+# 快捷键
+shortcutKey: true
 
 # 左下角自定义菜单
 menu:
@@ -79,6 +87,13 @@ article_txt: 转载请注明来源，欢迎对文章中的引用来源进行考�
 bottom_text: ©2017-2020 SoaringLee
 # 自定义页面最下方的站点版权信息
 # 如果不填，则自定义为 ©2017 author (这个author为hexo根目录_config.yml中配置的)
+
+# 底部备案号
+miit:
+  on: false
+  info: 京ICP证030173号
+  url: http://beian.miit.gov.cn/ # 默认链接为 http://beian.miit.gov.cn/
+
 
 reward: true
 # true 开启打赏功能
@@ -115,13 +130,21 @@ toc:
 
 #文章列表 鼠标移上去的样式, 为空时使用默认效果
 article_list:
+  title: '#383636' # 文章列表标题颜色
+  datetime: '#5e5e5f' # 文章发布日期颜色
   hover:
     background: '#e2e0e0'  # 背景色:提供几种：'#c1bfc1'  '#fbf4a8'
     color:     # 文字颜色 提供几种：'#ffffff'
 # 注意：由于颜色如果包含#，使用单引号 ' 引起来
 
+# 文章列表背景图
+article_bg_img:
+  on: false # 是否开启
+  src: https://i.loli.net/2019/07/22/5d3521411f3f169375.png
+  opacity: 0.3 # 背景图透明度，范围 0 ～ 1
+
 # 列表样式
-list: thread
+list: normal
 # normal : 普通样式
 # thread : 列表外圈有一个线框
 
@@ -135,11 +158,6 @@ table: green_title
 # 为空时类似github的table样式
 # green 绿色样式
 # green_title 头部为青色的table样式
-
-# 文章列表背景图
-article_bg_img:
-  on: true
-  src: http://img.xiangzhangshugongyi.com/FlSExUGfRSaqxkK5v42CpuI-tXAL.jpg
 
 # 首页背景图
 index_bg_img:
@@ -187,6 +205,18 @@ mathjax:
   on: true #是否启用
   per_page: false # 若只渲染单个页面，此选项设为false，页面内加入 mathjax: true
 
+# Mermaid 支持
+mermaid:
+  on: false
+  cdn: //cdn.jsdelivr.net/npm/mermaid@8.4.2/dist/mermaid.min.js
+  #cdn: //cdnjs.cloudflare.com/ajax/libs/mermaid/8.3.1/mermaid.min.js
+  options: # 更多配置信息可以参考 https://mermaidjs.github.io/#/mermaidAPI
+    theme: 'default'
+    startOnLoad: true
+    flowchart:
+      useMaxWidth: false
+      htmlLabels: true
+
 ##############################
 
 # 友情链接
@@ -199,12 +229,10 @@ friends:
 
 ##########评论设置#############
 comment:
-  on: true
-  type: gitalk  # 评论系统：gitalk、disqus、gentie、gitment,注意：使用时，在下方对应位置进行配置
-  comment_count: true  # 文章标题下方显示评论数
-  preload_comment: false  # 预加载评论区
-  ## false: 当点击评论条等区域时再加载评论模块
-  ## true: 页面加载时加载评论区
+  on: false
+  type: gitalk  # 评论系统：gitalk、disqus、gitment、utteranc、livere,注意：使用时，在下方对应位置进行配置
+  comment_count: true  # 文章标题下方显示评论数 目前仅支持 gitalk 和 disqus
+  ## 使用说明 https://yelog.org//2020/05/23/3-hexo-comment/
 # 各评论系统配置 ↓↓
 
 disqus:
@@ -247,24 +275,33 @@ gitment:
   # gitment : 通过github issue实现的评论系统
   # 开源地址 : https://github.com/imsun/gitment
   # 使用说明 :
-  #
+
+livere:
+  data_uid:
+  # 来必力: http://livere.com/
+  # 使用说明 : https://yelog.org//2020/05/23/3-hexo-comment/
+
+utteranc:
+  repo: xxx/xxx.github.io # 承载评论的仓库，填上自己新建的仓库
+  issue_term: pathname    # Issue 与 博客文章 之间映射关系
+  label: utteranc         # 创建的 Issue 添加的标签
+  theme: github-light     # 主题，可选主题请查看官方文档 https://utteranc.es/#heading-theme
+# 官方文档 https://utteranc.es/
+# 使用说明 https://yelog.org//2020/05/23/3-hexo-comment/
 
 ##############################
 
 ##########CND设置#############
 CDN:
-  jquery: //cdn.bootcss.com/jquery/2.2.4/jquery.min.js
-  jquery_cookie: //cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js
-  jquery_ui: //cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js
-  jquery_ui_css: //cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.css
-  highlight: //cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js
-  pjax: //cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js
-  animate: //cdn.bootcss.com/animate.css/3.5.2/animate.min.css
-  font_awsome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
-  nprogres_js: //cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js
-  mathjax: //cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML
-  photoswipe_js: //cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.js
-  photoswipe_ui_js: //cdn.bootcss.com/photoswipe/4.1.2/photoswipe-ui-default.min.js
-  photoswipe_css: //cdn.bootcss.com/photoswipe/4.1.2/photoswipe.min.css
-  photoswipe_skin_css: //cdn.bootcss.com/photoswipe/4.1.2/default-skin/default-skin.min.css
+  jquery: //cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js
+  jquery_cookie: //cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js
+  highlight: //cdn.jsdelivr.net/npm/highlightjs@9.16.2/highlight.pack.min.js
+  pjax: //cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js
+  animate: //cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css
+  nprogres_js: //cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js
+  mathjax: //cdn.jsdelivr.net/npm/mathjax@2.7.8/unpacked/MathJax.js?config=TeX-MML-AM_CHTML
+  photoswipe_js: //cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js
+  photoswipe_ui_js: //cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js
+  photoswipe_css: //cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css
+  photoswipe_skin_css: //cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css
 ##############################
