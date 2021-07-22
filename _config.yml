@@ -86,7 +86,7 @@ menu:
 # 文末声明
 article_txt: 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 2963033731@qq.com
 
-bottom_text: ©2017-2020 SoaringLee
+bottom_text: ©2017-2021 SoaringLee
 # 自定义页面最下方的站点版权信息
 # 如果不填，则自定义为 ©2017 author (这个author为hexo根目录_config.yml中配置的)
 
@@ -182,6 +182,7 @@ code:
 highlight:
   on: true # true开启代码高亮
   lineNum: true # true显示行号
+  copy: true # 复制功能
   theme: atom-dark #github
 # 代码高亮主题,效果可以查看 https://highlightjs.org/static/demo/
 # 支持主题：
