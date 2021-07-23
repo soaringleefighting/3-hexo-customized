@@ -1,4 +1,4 @@
-version: 1.0
+version: 1.0.1
 # 你的头像url
 avatar: /img/1_soaringlee_fighting.jpg
 favicon: /img/1_soaringlee_fighting.jpg
@@ -15,7 +15,7 @@ link:
   items:
     rss: /atom.xml
     github: https://github.com/soaringleefighting
-    facebook: 
+    facebook:
     twitter: https://music.163.com/#/playlist?id=797834576
     linkedin:
     instagram: 
@@ -48,6 +48,7 @@ category:
     - 工具
     - 读书
     - 生活
+    - 产品
   width:
     lg: 150 # 1468px<屏幕宽度 左侧分类宽度
     md: 120 # 1024px<屏幕宽度<=1468px 左侧分类宽度
@@ -92,8 +93,9 @@ bottom_text: ©2017-2021 SoaringLee
 
 # 底部备案号
 miit:
-  on: false
-  info: 京ICP证030173号
+  on: true
+  info: 飞翔的鲲 专属
+  #京ICP证030173号
   url: http://beian.miit.gov.cn/ # 默认链接为 http://beian.miit.gov.cn/
 
 
@@ -141,7 +143,7 @@ article_list:
 
 # 文章列表背景图
 article_bg_img:
-  on: false # 是否开启
+  on: true # 是否开启
   src: https://i.loli.net/2019/07/22/5d3521411f3f169375.png
   opacity: 0.3 # 背景图透明度，范围 0 ～ 1
 
@@ -163,6 +165,7 @@ table: green_title
 
 # 首页背景图
 index_bg_img:
+#/img/1_soaringlee_fighting.jpg
 # 其他页面背景图
 other_bg_img:
 
@@ -252,8 +255,8 @@ gentie:
 gitalk:
   githubID: soaringleefighting
   repo: soaringleefighting.github.io
-  ClientID: a9777cdb7073ca9a0508
-  ClientSecret: e69e5ad937ab2c5e3b82fa7f1a5dfdb14441e9c0
+  ClientID: f2e004e5b913b17dac9c
+  ClientSecret: 69fbaf41dc2bfc5a180b1b36a88168c898a8c028
   adminUser: soaringleefighting
   distractionFreeMode: true
   language: zh-CN
